@@ -223,7 +223,7 @@ func main() {
 		if err != nil {
 			log.Fatalf("failed to initialize postgres token store: %v", err)
 		}
-		examplePath := filepath.Join(wd, "config.example.yaml")
+		examplePath := filepath.Join(wd, "config.yaml")
 		ctx, cancel = context.WithTimeout(context.Background(), 30*time.Second)
 		if errBootstrap := pgStoreInst.Bootstrap(ctx, examplePath); errBootstrap != nil {
 			cancel()
@@ -282,7 +282,7 @@ func main() {
 		if err != nil {
 			log.Fatalf("failed to initialize object token store: %v", err)
 		}
-		examplePath := filepath.Join(wd, "config.example.yaml")
+		examplePath := filepath.Join(wd, "config.yaml")
 		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 		if errBootstrap := objectStoreInst.Bootstrap(ctx, examplePath); errBootstrap != nil {
 			cancel()
@@ -318,7 +318,7 @@ func main() {
 			configFilePath = filepath.Join(gitStoreRoot, "config", "config.yaml")
 		}
 		if _, statErr := os.Stat(configFilePath); errors.Is(statErr, fs.ErrNotExist) {
-			examplePath := filepath.Join(wd, "config.example.yaml")
+			examplePath := filepath.Join(wd, "config.yaml")
 			if _, errExample := os.Stat(examplePath); errExample != nil {
 				log.Fatalf("failed to find template config file: %v", errExample)
 			}

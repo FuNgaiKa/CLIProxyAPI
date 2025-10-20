@@ -690,7 +690,7 @@ docker run --rm -p 8317:8317 -v /path/to/your/config.yaml:/CLIProxyAPI/config.ya
 2.  Prepare the configuration file:
     Create a `config.yaml` file by copying the example and customize it to your needs.
     ```bash
-    cp config.example.yaml config.yaml
+    cp config.yaml config.yaml
     ```
     *(Note for Windows users: You can use `copy config.example.yaml config.yaml` in CMD or PowerShell.)*
 

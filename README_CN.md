@@ -700,7 +700,7 @@ docker run --rm -p 8317:8317 -v /path/to/your/config.yaml:/CLIProxyAPI/config.ya
 2.  准备配置文件：
     通过复制示例文件来创建 `config.yaml` 文件，并根据您的需求进行自定义。
     ```bash
-    cp config.example.yaml config.yaml
+    cp config.yaml config.yaml
     ```
     *（Windows 用户请注意：您可以在 CMD 或 PowerShell 中使用 `copy config.example.yaml config.yaml`。）*
 
